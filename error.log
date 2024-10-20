@@ -1,0 +1,65 @@
+2024-09-21 21:38:08 [31merror[39m: connect ETIMEDOUT
+2024-09-21 21:38:10 [31merror[39m: getaddrinfo ENOTFOUND redis-1d9a097b-ajaysehwal000-0acb.a.aivencloud.com
+2024-09-21 21:48:47 [31merror[39m: Error in waitForJobAndCache:
+2024-09-21 21:49:54 [31merror[39m: Error in waitForJobAndCache:
+2024-09-21 21:51:02 [31merror[39m: Error in waitForJobAndCache:
+2024-09-21 21:54:36 [31merror[39m: Error in waitForJobAndCache:
+2024-09-22 11:18:06 [31merror[39m: Error: (HTTP code 409) container stopped/paused - container f22c39dc7b8be5c4f2f202fbc53e021a0ad4c528f6d128a8cc3a9aceb81610e1 is not running 
+2024-09-22 11:19:09 [31merror[39m: Error: (HTTP code 409) unexpected - Conflict. The container name "/testing" is already in use by container "f22c39dc7b8be5c4f2f202fbc53e021a0ad4c528f6d128a8cc3a9aceb81610e1". You have to remove (or rename) that container to be able to reuse that name. 
+2024-09-22 11:19:43 [31merror[39m: Error: (HTTP code 304) container already stopped -  
+2024-09-22 11:20:53 [31merror[39m: Error: (HTTP code 409) unexpected - Conflict. The container name "/testing" is already in use by container "f22c39dc7b8be5c4f2f202fbc53e021a0ad4c528f6d128a8cc3a9aceb81610e1". You have to remove (or rename) that container to be able to reuse that name. 
+2024-09-22 11:50:04 [31merror[39m: Error: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_httpMessage' -> object with constructor 'ClientRequest'
+    --- property 'socket' closes the circle
+2024-09-22 11:51:01 [31merror[39m: Error: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property '_httpMessage' -> object with constructor 'ClientRequest'
+    --- property 'socket' closes the circle
+2024-09-22 18:41:26 [31merror[39m: Error in waitForJobAndCache:
+2024-09-22 19:02:04 [31merror[39m: Could not close connections in time, forcefully shutting down
+2024-09-22 20:40:47 [31merror[39m: Error: ENOENT: no such file or directory, open 'C:\tmp\main.js'
+2024-09-22 20:48:44 [31merror[39m: Error: (HTTP code 404) no such container - Could not find the file /code/main.js in container b14909ae91a94ab1c4e25743a76fc74a799f0850e6a61ffbef56c1a6b5816cc1 
+2024-09-22 20:51:27 [31merror[39m: Error: ENOENT: no such file or directory, open 'C:\tmp\main.js'
+2024-09-22 20:51:36 [31merror[39m: Error: ENOENT: no such file or directory, open 'C:\tmp\main.js'
+2024-09-22 21:35:33 [31merror[39m: Error executing code: Error: (HTTP code 404) no such container - No such container: c5184859eeee1d40aec2e43f18aa86ededf229a445b764fba157726535cb8e49 
+2024-09-22 21:35:33 [31merror[39m: Error during cleanup: (HTTP code 404) no such container - No such container: c5184859eeee1d40aec2e43f18aa86ededf229a445b764fba157726535cb8e49 
+2024-09-23 15:27:11 [31merror[39m: read ECONNRESET
+2024-09-24 13:18:41 [31merror[39m: Error during container execution: connect ENOENT //./pipe/docker_engine
+2024-09-24 14:17:46 [31merror[39m: read ECONNRESET
+2024-09-24 15:00:10 [31merror[39m: read ECONNRESET
+2024-09-24 17:55:51 [31merror[39m: Error during container execution: connect ENOENT //./pipe/docker_engine
+2024-09-24 19:21:03 [31merror[39m: read ECONNRESET
+2024-09-24 20:11:22 [31merror[39m: read ECONNRESET
+2024-09-27 07:32:23 [31merror[39m: Error during container execution: (HTTP code 409) unexpected - cannot remove container "/sandbox-48e89cee-e8e7-4ab4-b987-419df4ccd97e": container is running: stop the container before removing or force remove 
+2024-09-27 07:34:26 [31merror[39m: Error during container execution: (HTTP code 409) unexpected - cannot remove container "/sandbox-d255c236-7af2-4c52-b229-63411b5284e4": container is running: stop the container before removing or force remove 
+2024-09-27 07:38:35 [31merror[39m: Error during container execution: (HTTP code 409) unexpected - cannot remove container "/sandbox-9d86585f-1827-4563-a4c6-15374848dc6b": container is running: stop the container before removing or force remove 
+2024-09-27 10:20:35 [31merror[39m: read ECONNRESET
+2024-09-27 11:14:45 [31merror[39m: Error during container execution: (HTTP code 409) container stopped/paused - container 71d4a4e5c45d5ee65cf70e5a8d21b7f658bfdd1297428af3f29b19d3fa0bc359 is not running 
+2024-09-27 11:34:28 [31merror[39m: Error during container execution: (HTTP code 409) container stopped/paused - container 549ecdecedeb925629cfbf90224d622cbc4f3fa5d74b5df7510d68c918ab5904 is not running 
+2024-09-27 11:34:28 [31merror[39m: Error stopping compile container: (HTTP code 304) container already stopped -  
+2024-09-27 11:36:29 [31merror[39m: Error during container execution: (HTTP code 409) container stopped/paused - container b0d6489d9d6d6fe1b3b2969f8fa7c5b192edab8cb3cbd4c8a94481d1f18c1881 is not running 
+2024-09-27 11:36:47 [31merror[39m: Error during container execution: (HTTP code 409) container stopped/paused - container e0bf2afd8d5cd22937e410aeaf4a20f32aad44c726ee6e1e72d786a9fcf3ea86 is not running 
+2024-09-27 11:53:28 [31merror[39m: Error during container execution: (HTTP code 409) container stopped/paused - container c12333526d37705d986d0ea86d2b9abd8c631c8cad7fe359035406ebce83fde4 is not running 
+2024-09-27 11:54:09 [31merror[39m: Error during container execution: (HTTP code 409) container stopped/paused - container 4b1af0d4421d19c89d3e7b995df1f67e051b34e7735d6703e854f59748207565 is not running 
+2024-09-27 11:55:15 [31merror[39m: Error during container execution: (HTTP code 409) container stopped/paused - container 1dd2979ac89e9717b8efd67f4b1505147f1f7f7d58004942903c8111c1e09276 is not running 
+2024-09-27 11:55:40 [31merror[39m: Error during container execution: (HTTP code 409) container stopped/paused - container 7c580f2e93ef3c9ff13a8d63376b53ac6641cd7bcc2229ced1d9ab7bf9f9d0d9 is not running 
+2024-09-27 11:56:34 [31merror[39m: Error during container execution: (HTTP code 409) container stopped/paused - container 3bc569be006aa41d33e082778d261a404315b63fcd4fb3e58f7b620911d1cbb1 is not running 
+2024-09-27 11:57:03 [31merror[39m: Error during container execution: (HTTP code 409) container stopped/paused - container 9654a8ad6485fc9c414c28b8be30cfbc6a5cd349a78cb515da69e2ebe60f79f2 is not running 
+2024-09-27 11:58:43 [31merror[39m: Error executing code: Error: (HTTP code 304) container already started -  
+2024-09-27 12:00:28 [31merror[39m: Error during container execution: (HTTP code 409) container stopped/paused - container 3876eaea7bfa8057b832d0659420530711bb0e6a3ce457c22245ab6e98a95545 is not running 
+2024-09-27 12:00:35 [31merror[39m: Error during container execution: (HTTP code 409) container stopped/paused - container ef4d901e1ffa4d7c073143839e98d2f8b5f5a57f435ce7d59027fbce96dc1b10 is not running 
+2024-09-27 16:09:04 [31merror[39m: Failed job 70: job stalled more than allowable limit
+2024-09-27 18:13:13 [31merror[39m: read ECONNRESET
+2024-10-06 19:08:09 [31merror[39m: Uncaught Exception: bind EADDRINUSE null:8000
+2024-10-12 14:47:12 [31merror[39m: Uncaught Exception: write EPIPE
+2024-10-12 14:47:12 [31merror[39m: Uncaught Exception: write EPIPE
+2024-10-12 15:00:12 [31merror[39m: Uncaught Exception: write EPIPE
+2024-10-12 15:01:09 [31merror[39m: Uncaught Exception: write EPIPE
+2024-10-12 15:15:25 [31merror[39m: Uncaught Exception: write EPIPE
+2024-10-12 15:15:25 [31merror[39m: Uncaught Exception: write EPIPE
+2024-10-13 06:01:48 [31merror[39m: Uncaught Exception: write EPIPE
+2024-10-13 10:01:35 [31merror[39m: Uncaught Exception: write EPIPE
+2024-10-20 17:36:14 [31merror[39m: read ECONNRESET
+2024-10-20 17:36:16 [31merror[39m: read ECONNRESET
+2024-10-20 17:36:16 [31merror[39m: read ECONNRESET
