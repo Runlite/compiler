@@ -1,0 +1,141 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model ApiKey {
+  id          String        @id @default(cuid())
+  name        String?
+  description String?
+  key         String        @unique
+  userId      String
+  version     Version
+  status      Status        @default(ACTIVE)
+  permissions Json?
+  expiresAt   DateTime?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  User        User          @relation(fields: [userId], references: [id])
+  UsageRecord UsageRecord[]
+}
+
+model BillingInfo {
+  id        String   @id
+  userId    String   @unique
+  name      String
+  address   String
+  city      String
+  country   String
+  zipCode   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  User      User     @relation(fields: [userId], references: [id])
+}
+
+model Subscription {
+  id                 String             @id @default(uuid())
+  userId             String
+  planId             String
+  status             SubscriptionStatus
+  currentPeriodStart DateTime
+  currentPeriodEnd   DateTime
+  cancelAtPeriodEnd  Boolean            @default(false)
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime
+  SubscriptionPlan   SubscriptionPlan   @relation(fields: [planId], references: [id])
+  User               User               @relation(fields: [userId], references: [id])
+}
+
+model SubscriptionPlan {
+  id                String          @id @default(uuid())
+  description       String?
+  price             Decimal
+  interval          BillingInterval
+  features          Json
+  maxApiKeys        Int
+  maxRequestsPerDay Int
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime
+  name              Plans
+  Subscription      Subscription[]
+}
+
+model UsageRecord {
+  id         String     @id @default(uuid())
+  apiKeyId   String
+  isCached   Boolean
+  endpoint   String
+  method     HttpMethod
+  statusCode Int
+  timestamp  DateTime   @default(now())
+  ApiKey     ApiKey     @relation(fields: [apiKeyId], references: [id])
+}
+
+model User {
+  id           String         @id
+  email        String         @unique
+  displayName  String?
+  photoURL     String?
+  provider     AuthProvider
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime
+  ApiKey       ApiKey[]
+  AuditLog     AuditLog[]
+  BillingInfo  BillingInfo?
+  Subscription Subscription[]
+}
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  userId    String
+  action    String
+  details   Json?
+  createdAt DateTime @default(now())
+  User      User     @relation(fields: [userId], references: [id])
+}
+
+enum Plans {
+  FREE
+  BASIC
+  PREMIUM
+  ENTERPRISE
+}
+
+enum Status {
+  ACTIVE
+  INACTIVE
+}
+
+enum Version {
+  V1
+  V2
+}
+
+enum BillingInterval {
+  MONTHLY
+  YEARLY
+}
+
+enum HttpMethod {
+  GET
+  POST
+  PUT
+  DELETE
+  PATCH
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  PAST_DUE
+  CANCELED
+  UNPAID
+}
+
+enum AuthProvider {
+  GOOGLE
+  GITHUB
+}
